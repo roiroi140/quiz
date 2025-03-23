@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>クイズ置き場</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>クイズ置き場</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+
+<body>
   <section class="section">
     <div class="container">
       <p class="is-size-1">
@@ -16,46 +18,57 @@
       <p class="is-size-3">
         ドラえもんに出てくるスネ夫の名字は？
       </p>
-      <!--こたえ折りたたみ-->
-  <div onclick="obj=document.getElementById('open1').style; obj.display=(obj.display=='none')?'block':'none';">
-  <a style="cursor:pointer;" class="button">▼ 答え</a>
-  </div>
-  <div id="open1" style="display:none;clear:both;" class="is-size-5">
-  <!--こたえ-->
-     答え 骨川<br>
-    スネ夫の本名は骨川スネ夫である。
-  </div>
-      <!--答え折りたたみおわり-->
+
+      <div onclick="obj=document.getElementById('open1').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;" class="button">▼ 答え</a>
+      </div>
+
+      <div id="open1" style="display:none;clear:both;" class="is-size-5">
+        答え 骨川<br>
+        スネ夫の本名は骨川スネ夫である。
+      </div>
+
       <p class="is-size-2 has-background-info has-text-black">問題2</p>
       <p class="is-size-3">
         ドラえもんの好物はどらやき、ではドラミちゃんの好物は？
       </p>
-      <!--こたえ折りたたみ-->
-  <div onclick="obj=document.getElementById('open2').style; obj.display=(obj.display=='none')?'block':'none';">
-  <a style="cursor:pointer;" class="button">▼ 答え</a>
-  </div>
-  <div id="open2" style="display:none;clear:both;" class="is-size-5">
-  <!--こたえ-->
-     答え メロンパン<br>
-    ドラミちゃんの好物はメロンパンである
-  </div>
-      <!--答え折りたたみおわり-->
+      <div onclick="obj=document.getElementById('open2').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;" class="button">▼ 答え</a>
+      </div>
+
+      <div id="open2" style="display:none;clear:both;" class="is-size-5">
+        答え メロンパン<br>
+        ドラミちゃんの好物はメロンパンである
+      </div>
+
       <p class="is-size-2 has-background-info has-text-black">問題3</p>
       <p class="is-size-3">
-        	将棋に使う駒の数は敵味方合わせていくつでしょう？
+        将棋に使う駒の数は敵味方合わせていくつでしょう？
       </p>
-      <!--こたえ折りたたみ-->
+
       <div onclick="obj=document.getElementById('open3').style; obj.display=(obj.display=='none')?'block':'none';">
         <a style="cursor:pointer;" class="button">▼ 答え</a>
       </div>
+
       <div id="open3" style="display:none;clear:both;" class="is-size-5">
-        <!--こたえ-->
         答え 40こ
       </div>
-      <!--こたえ折りたたみ終わり-->  
+
+      <p class="is-size-2 has-background-info has-text-black">問題4</p>
+      <img src="swis.png" width="50%">
       <p class="is-size-3">
+        この国旗はどこの国？
       </p>
+
+      <div onclick="obj=document.getElementById('open4').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;" class="button">▼ 答え</a>
+      </div>
+
+      <div id="open4" style="display:none;clear:both;" class="is-size-5">
+        答え スイス
+      </div>
     </div>
   </section>
-  </body>
+</body>
+
 </html>
