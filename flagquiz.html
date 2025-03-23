@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>クイズ置き場</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <style>
+        .quiz-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .quiz-container p {
+            color: #000000;
+        }
+
+        .quiz-container h2 {
+            color: #000000;
+            background-color:#209cee;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">色々クイズ</h1>
+
+            <div class="quiz-container">
+                <h2 class="subtitle p-2">問題1</h2>
+                <figure class="image is-128x128">
+                    <img src="https://frame-illust.com/fi/wp-content/uploads/2018/04/flag-switzerland.png" alt="スイスの国旗">
+                </figure>
+                <p class="is-size-4">この国旗はどこの国?</p>
+                <button class="button" onclick="toggleAnswer('open1')" aria-expanded="false">▼ 答え</button>
+                <div id="open1" class="is-size-5" style="display: none;">答え：スイス</div>
+            </div>
+
+            <div class="quiz-container">
+                <h2 class="subtitle p-2">問題2</h2>
+                <figure class="image is-128x128">
+                    <img src="https://frame-illust.com/fi/wp-content/uploads/2018/04/flag-russia.png" alt="ロシアの国旗">
+                </figure>
+                <p class="is-size-4">この国旗はどこの国?</p>
+                <button class="button" onclick="toggleAnswer('open2')" aria-expanded="false">▼ 答え</button>
+                <div id="open2" class="is-size-5" style="display: none;">答え：ロシア</div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = answer.previousElementSibling;
+            const isVisible = answer.style.display === "block";
+
+            answer.style.display = isVisible ? "none" : "block";
+            button.setAttribute("aria-expanded", !isVisible);
+        }
+    </script>
+
+</body>
+
+</html>
