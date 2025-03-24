@@ -14,13 +14,25 @@
       border-radius: 5px;
       background-color: #f9f9f9;
     }
+
     .quiz-container p {
-      color:#000000
+      color: #000000
     }
   </style>
 </head>
 
 <body>
+
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu is-centered">
+      <div class="navbar-start">
+        <a href="index.html" class="navbar-item button is-primary">トップページ</a>
+        <a href="flagquiz.html" class="navbar-item button is-info">国旗クイズ</a>
+        <a href="iroiroquiz.html" class="navbar-item button is-info">いろんなクイズ</a>
+      </div>
+    </div>
+  </nav>
+
   <section class="section">
     <div class="container">
       <h1 class="title">色々クイズ</h1>
@@ -71,7 +83,7 @@
       const answer = document.getElementById(id);
       const button = answer.previousElementSibling;
       const isVisible = answer.style.display === "block";
-      
+
       answer.style.display = isVisible ? "none" : "block";
       button.setAttribute("aria-expanded", !isVisible);
     }
