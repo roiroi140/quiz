@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>クイズ置き場</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-menu is-centered">
+            <div class="navbar-start">
+                <a href="index.html" class="navbar-item button is-primary">トップページ</a>
+                <a href="flagquiz.html" class="navbar-item button is-info">国旗クイズ</a>
+                <a href="iroiroquiz.html" class="navbar-item button is-info">いろんなクイズ</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">毎日クイズ</h1>
+
+            <div class="quiz-container">
+                <h2 class="subtitle has-background-info has-text-black p-2">問題</h2>
+                <p class="is-size-4">画像のようにした時どっちがさきに落ちる?</p>
+                <figure class="image is-128x128">
+                    <img src="1t.png" alt="がぞー">
+                </figure>
+                <button class="button" onclick="toggleAnswer('open1')" aria-expanded="false">▼ 答え</button>
+                <div id="open1" class="is-size-5" style="display: none;">答え：同時に落ちる</div>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = answer.previousElementSibling;
+            const isVisible = answer.style.display === "block";
+
+            answer.style.display = isVisible ? "none" : "block";
+            button.setAttribute("aria-expanded", !isVisible);
+        }</script>
+</body>
+
+</html>
